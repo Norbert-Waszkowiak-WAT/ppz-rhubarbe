@@ -32,7 +32,7 @@ Naszym głownym celem jest intuicyjność i łatwość zrozumienia dla każdego 
 
 **Narzędzia:**
    - Visual studio code(wygląd i funkcje strony)
-   - Open API weather(dane)
+   -  API weather(dane)
 
 ### 6. Architektura systemu
   
