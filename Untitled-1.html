@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device=width,initial-scale=1.0">
+        <title>Strona pogodowa</title>
+        <style>
+            body {
+                font-family: Arial,sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                background-color: #e0f7fa;
+            }
+
+            header {
+                background-color: #0288d1;
+                color: white;
+                padding: 1rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            .weather-container {
+                max-width: 600px;
+                background-color: white;
+                padding: 20px;
+                margin-top: 20px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .city-name {
+                font-size: 2em;
+                margin: 0;
+            }
+
+            .temperature {
+                font-size: 3em;
+                font-weight: bold;
+                color: #0288d1; 
+            }
+
+            .decription {
+                font-size: 1,2em;
+                justify-content: space-around;
+                margin-top: 10px;
+            }
+
+            .other-info {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 10px;
+            }
+
+            .info {
+                font-size: 1em;
+                color: #777;
+            }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <h1>Aktaula Pogoda</h1>
+        </header>
+        <div class="weather-container">
+            <p class="city-name">Warszawa</p>
+            <p class="temperature"></p>
+            <p class="decription"></p>
+            <div class="other-info">
+                <div class="info">
+                    <p><strong>Wilgotność:</strong></p>
+                </div>
+                <div class="info">
+                    <p><strong>Wiatr:</strong></p>
+                </div>
+                <div class="info">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
