@@ -1,63 +1,69 @@
+### 1. Strona: Prognoza Pogody
+Tworzymy prostą i przejrzystą stronę internetową, która będzie pokazywać pogodę dla Warszawy.
 
-1. Strona - prognoza pogody
-Prosta, przejrzysta strona internetowa pokazująca pogodę dla Warszawy.
+### 2. Skład Zespołu
+- Daniel Kołacz
+- Maciej Wielkopolski
+- Filip Bogdanowicz
 
-2. Skład zespołu:
-    Daniel Kołacz   
-    Maciej Wielkopolski
-    Filip Bogdanowicz
+### 3. Cel Projektu
+Celem aplikacji jest stworzenie strony pogodowej, która w łatwy i przystępny sposób informuje użytkowników o lokalnej pogodzie. Naszym priorytetem jest intuicyjność i zrozumiałość interfejsu dla każdego użytkownika.
 
-3. Cel:
-Celem aplikacji jest stworzenie strony pogodowej, która by w łatwy i przejrzysty sposób informowałaby użytkownika o lokalnej pogodzie
-Naszym głownym celem jest intuicyjność i łatwość zrozumienia dla każdego użytkownika
+### 4. Zakres Funkcjonalności
 
+**Wyświetlanie aktualnej pogody:**
+- Opady
+- Wilgotność
+- Kierunek i prędkość wiatru
+- Temperatura
+- Zachmurzenie
+- Wschód i zachód słońca
+- Prognoza na 12 godzin w przód
 
-### 4. Zakres funkcjonalności
-
-**Moduły:**
-
-   
-### 1. Informacje
-    -opady
-    -wilgotność
-    -kierunek i prędkość wiatru
-    -temperatura
-    -zachmurzenie
-    -wschód i zachód słońca
-    -prognoza do 12h wprzód
-    -*mapa pogodowa(?)*
 ### 5. Technologie
-**Języki programowania:**
-   -HTML
+
+**Języki Programowania:**
+- HTML
 
 **Narzędzia:**
-   - Visual studio code(wygląd i funkcje strony)
-   -  API weather(dane)
+- Visual Studio Code (do tworzenia wyglądu i funkcji strony)
+- API pogodowe (do pozyskiwania danych)
 
-### 6. Architektura systemu
-  
+### 6. Architektura Systemu
+
+**Frontend:**
+- Interfejs użytkownika (UI)(tryb nocny/dzienny)
+
+**Backend:**
+- Integracja z API pogodowym
 
 **Opis:**
-   -strona pobiera dane z API  weather i wyświetla je w przystępnej formie
-     
-    Harmonogram(może się zmieniać)
+Strona pobiera dane z API pogodowego i wyświetla je w przystępny sposób.
 
-**Etap 1: Podstawy
-   - **1 etap
-        -stworzenie menu i stopki
-        -treść(kolor tła, wielkość i rodzaj czcionki)
-**Etap 2: trochę więcej niż podstawy
-    -**2 etap
-        -implementacja danych z API weather
-**Etap 3: Czas na dociągnięcia gdyby coś poszło nie tak
+### Harmonogram
 
-    Możliwe zagrożenia:
-    API weather odmówi posłuszeństwa
-    Strona będzie nieczytelna
-    Brak możliwych danych do wyświetlenia
+**Etap 1: Podstawy**
+- Ustalenie treści (kolor tła, wielkość i rodzaj czcionki)
+- Określenie rodzajów wyświetlanych informacji (wilgotność, temperatura, zachmurzenie, ciśnienie, wiatr)
+- Stworzenie interfejsu użytkownika (UI)
 
-    Kryteria oceny:
-    Strona jest czytelna
-    Wyświetla prawidłowe dane
-    
+**Etap 2: Implementacja API pogodowego**
+- Integracja danych z API pogodowym
+- Korygowanie ewentualnych błędów
 
+**Etap 3: Wdrażanie strony i eliminacja błędów**
+-sprawdzenie poprawności wszysktich plików
+-sprawdzenie czy strona rzeczywiście działa
+
+**Etap 4: Testowanie i ostateczna optymalizacja**
+-sprawdzenie poprawności danych
+-sprawdzenie UI działa
+
+### Możliwe Zagrożenia
+- API pogodowe może przestać działać
+- Strona może być nieczytelna
+- Brak dostępnych danych do wyświetlenia
+
+### Kryteria Oceny
+- Strona jest czytelna
+- Wyświetla prawidłowe dane
