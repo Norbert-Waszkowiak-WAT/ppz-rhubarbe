@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona pogodowa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('warszawa.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+        }
+        header {
+            background-color: rgba(2, 136, 209, 0.9);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .weather-container {
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .city-name {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+        }
+        .temperature {
+            font-size: 4em;
+            font-weight: bold;
+            color: #0288d1;
+            margin: 10px 0;
+        }
+        .description {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #555;
+        }
+        .other-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+        .info {
+            font-size: 1.2em;
+            color: #777;
+            text-align: center;
+            flex: 1;
+        }
+        .info strong {
+            color: #0288d1;
+        }
+        footer {
+            margin-top: auto;
+            background-color: rgba(2, 136, 209, 0.9);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aktualna Pogoda w Warszawie</h1>
+    </header>
+    <div class="weather-container">
+        <p class="city-name">Warszawa</p>
+        <p class="temperature">20°C</p> 
+        <p class="description">Słonecznie</p>
+        <div class="other-info">
+            <div class="info">
+                <p><strong>Wilgotność:</strong><br>50%</p> 
+            </div>
+            <div class="info">
+                <p><strong>Wiatr:</strong><br>10 km/h</p> 
+            </div>
+            <div class="info">
+                <p><strong>Ciśnienie:</strong><br>1013 hPa</p> 
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Strona pogodowa | Wszystkie prawa zastrzeżone</p>
+    </footer>
+</body>
+</html>
