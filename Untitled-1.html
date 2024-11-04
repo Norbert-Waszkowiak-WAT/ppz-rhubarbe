@@ -1,89 +1,100 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-        content="width=device=width,initial-scale=1.0">
-        <title>Strona pogodowa</title>
-        <style>
-            body {
-                font-family: Arial,sans-serif;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 0;
-                padding: 0;
-                background-image: url(warszawa.jpg);
-                width: 664px;
-                height: 442px;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona pogodowa</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-image: url(warszawa.jpg);
+    background-size: cover; /* Utrzymuje obraz w rozmiarze pełnym */
+    background-position: center;
+    background-repeat: no-repeat; /* Nie powtarza obrazu */
+    background-attachment: fixed; /* Utrzymuje obraz w tle podczas przewijania */
+    color: #333;
+}
+        header {
+            background-color: rgba(2, 136, 209, 0.9);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            
+        }
 
-            header {
-                background-color: #0288d1;
-                color: white;
-                padding: 1rem;
-                text-align: center;
-                width: 100%;
-            }
+        .weather-container {
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
 
-            .weather-container {
-                max-width: 600px;
-                background-color: white;
-                padding: 20px;
-                margin-top: 20px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                border-radius: 8px;
-                text-align: center;
-            }
+        .city-name {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+        }
 
-            .city-name {
-                font-size: 2em;
-                margin: 0;
-            }
+        .temperature {
+            font-size: 4em;
+            font-weight: bold;
+            color: #0288d1;
+            margin: 10px 0;
+        }
 
-            .temperature {
-                font-size: 3em;
-                font-weight: bold;
-                color: #0288d1; 
-            }
+        .description {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #555;
+        }
 
-            .decription {
-                font-size: 1,2em;
-                justify-content: space-around;
-                margin-top: 10px;
-            }
+        .other-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 0 10px;
+        }
 
-            .other-info {
-                display: flex;
-                justify-content: space-around;
-                margin-top: 10px;
-            }
+        .info {
+            font-size: 1.2em;
+            color: #777;
+            text-align: center;
+        }
 
-            .info {
-                font-size: 1em;
-                color: #777;
-            }
-        </style>
-    </head>
-    <body>
-        <header> 
-            <h1>Aktualna Pogoda</h1>
-        </header>
-        <div class="weather-container">
-            <p class="city-name">Warszawa</p>
-            <p class="temperature"></p>
-            <p class="decription"></p>
-            <div class="other-info">
-                <div class="info">
-                    <p><strong>Wilgotność:</strong></p>
-                </div>
-                <div class="info">
-                    <p><strong>Wiatr:</strong></p>
-                </div>
-                <div class="info">
-                    
-                </div>
+        .info strong {
+            color: #0288d1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aktualna Pogoda</h1>
+    </header>
+    <div class="weather-container">
+        <p class="city-name">Warszawa</p>
+        <p class="temperature">-C</p> 
+        <p class="description">-</p>
+        <div class="other-info">
+            <div class="info">
+                <p><strong>Wilgotność:</strong><br>-</p> 
+            </div>
+            <div class="info">
+                <p><strong>Wiatr:</strong><br>-</p> 
+            </div>
+            <div class="info">
+                <p><strong>Ciśnienie:</strong><br>-</p> 
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
