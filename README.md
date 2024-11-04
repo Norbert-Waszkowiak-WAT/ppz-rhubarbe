@@ -57,7 +57,7 @@ Strona pobiera dane z API pogodowego i wyświetla je w przystępny sposób.
 
 **Etap 4: Testowanie i ostateczna optymalizacja**
 -sprawdzenie poprawności danych
--sprawdzenie UI działa
+-sprawdzenie czy UI działa
 
 ### Możliwe Zagrożenia
 - API pogodowe może przestać działać
