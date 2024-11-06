@@ -6,6 +6,7 @@
     <title>Strona pogodowa</title>
     <style>
         body {
+            height:100%;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -14,10 +15,10 @@
             padding: 0;
             background-image: url(OIP.jpg);
             background-size: cover;
-            background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #333;
+            
         }
         header {
             background-color: rgba(2, 136, 209, 0.9);
@@ -35,6 +36,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             text-align: center;
+            height: 100%;
+            margin-bottom: 130px;
+            float:left;
         }
         .city-name {
             font-size: 2.5em;
@@ -68,6 +72,7 @@
             color: #0288d1;
         }
         footer {
+            position:bottom;
             margin-top: auto;
             background-color: rgba(2, 136, 209, 0.9);
             color: white;
@@ -76,13 +81,30 @@
             width: 100%;
             position: relative;
         }
+        .mapa{
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            height: 100%;
+            margin-left:120px;
+            
+            float:left;
+        }
+      
     </style>
 </head>
-<body>
+
+
     <header>
         <h1>Aktualna Pogoda w Warszawie</h1>
     </header>
-    <div class="weather-container">
+    <body>
+        <div class="all">
+        <div class="weather-container">
         <p class="city-name">Warszawa</p>
         <p class="temperature">-°C</p> 
         <p class="description">-</p>
@@ -97,7 +119,14 @@
                 <p><strong>Ciśnienie:</strong><br>-</p> 
             </div>
         </div>
-    </div>
+        </div>
+
+        <div class="mapa">
+            <p class="city-name">Mapa Pogodowa</p>
+        </div>
+        </div>
+    </body>
+
     <footer>
         <p>&copy; 2024 Strona pogodowa | Wszystkie prawa zastrzeżone</p>
     </footer>
