@@ -18,7 +18,6 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #333;
-            
         }
         header {
             background-color: rgba(2, 136, 209, 0.9);
@@ -36,9 +35,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             text-align: center;
-            height: 100%;
             margin-bottom: 130px;
-            float:left;
         }
         .city-name {
             font-size: 2.5em;
@@ -68,20 +65,15 @@
             text-align: center;
             flex: 1;
         }
-        .info strong {
-            color: #0288d1;
-        }
         footer {
-            position:bottom;
             margin-top: auto;
             background-color: rgba(2, 136, 209, 0.9);
             color: white;
             padding: 1rem;
             text-align: center;
             width: 100%;
-            position: relative;
         }
-        .mapa{
+        .mapa {
             max-width: 600px;
             background-color: rgba(255, 255, 255, 0.9);
             padding: 30px;
@@ -89,46 +81,45 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             text-align: center;
-            height: 100%;
-            margin-left:120px;
-            
-            float:left;
         }
-      
     </style>
 </head>
-
-
+<body>
     <header>
         <h1>Aktualna Pogoda w Warszawie</h1>
     </header>
-    <body>
-        <div class="all">
+    <div class="all">
         <div class="weather-container">
-        <p class="city-name">Warszawa</p>
-        <p class="temperature">-°C</p> 
-        <p class="description">-</p>
-        <div class="other-info">
-            <div class="info">
-                <p><strong>Wilgotność:</strong><br>-%</p> 
-            </div>
-            <div class="info">
-                <p><strong>Wiatr:</strong><br>-</p> 
-            </div>
-            <div class="info">
-                <p><strong>Ciśnienie:</strong><br>-</p> 
+            <p class="city-name">Warszawa</p>
+            <p class="temperature">-°C</p>
+            <p class="description">-</p>
+            <p class="wind">wiatr: km/h</p>
+            <div class="other-info">
+                
             </div>
         </div>
-        </div>
-
         <div class="mapa">
             <p class="city-name">Mapa Pogodowa</p>
+            <iframe src="https://dashboard.openweather.co.uk/dashboard" width="100%" height="400" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-        </div>
-    </body>
-
+    </div>
     <footer>
         <p>&copy; 2024 Strona pogodowa | Wszystkie prawa zastrzeżone</p>
     </footer>
+    <script>
+        const apiKey = 'YOUR_API_KEY';
+        const city = 'Warszawa';
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=warsaw&appid=c3b32bdb278eee4d461fc8122e163cac&units=metric&lang=pl`)
+            .then(response => response.json())
+            .then(data => {
+                document.querySelector('.temperature').textContent = `${data.main.temp}°C`;
+                document.querySelector('.description').textContent = data.weather[0].description;
+                document.querySelector('.wind').textContent = `${data.wind.speed} km/h`;
+                document.querySelector('.info .humidity p').innerHTML = `<strong>Wilgotność:</strong><br>${data.main.humidity}%`;
+                document.querySelector('.info .pressure p').innerHTML = `<strong>Ciśnienie:</strong><br>${data.main.pressure} hPa`;
+            })
+            .catch(error => console.error('Błąd pobierania danych:', error));
+    </script>
 </body>
 </html>
